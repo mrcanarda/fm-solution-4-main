@@ -1,0 +1,86 @@
+@media (min-width: 992px) {
+	body {
+		font-size: 2.2rem;
+		line-height: 3.2rem;
+	}
+	h1 {
+		font-size: 7rem;
+		line-height: 7rem;
+	}
+	.top {
+		&__text {
+			max-width: 36rem;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.wrapper {
+		max-width: 1200px;
+	}
+	h1 {
+		font-size: 9.6rem;
+		line-height: 8.8rem;
+	}
+	.top {
+		height: 80rem;
+		&__hero {
+			left: 50%;
+			transform: translateX(-50%);
+			width: 50%;
+			object-fit: cover;
+		}
+		&__title {
+			position: absolute;
+			left: 0;
+			mix-blend-mode: difference;
+			color: $white;
+		}
+		&__text {
+			max-width: 36rem;
+			margin-bottom: 3.5em;
+		}
+		.container {
+			margin-bottom: 6em;
+		}
+		&::before {
+			margin: 0 1em;
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			left: -15%;
+			top: 0;
+			background-color: $black;
+			z-index: -10;
+			content: '';
+		}
+	}
+	.grid {
+		max-height: 115rem;
+		grid-template-rows: 1fr 0.85fr 1.15fr;
+		gap: 1.5em;
+		&__block {
+			&-white {
+				padding: 0.5em 1em;
+			}
+			&-black {
+				padding: 1em 2em;
+			}
+		}
+	}
+	.bottom {
+		.flex {
+			flex-direction: row;
+			justify-content: space-between;
+			p {
+				max-width: 40rem;
+			}
+		}
+	}
+	.location {
+		&__address {
+			&-right {
+				max-width: 50rem;
+			}
+		}
+	}
+}

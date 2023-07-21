@@ -1,0 +1,86 @@
+.wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 768px;
+}
+.container {
+	padding: 0 1em;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Big Shoulders Display', cursive;
+	font-weight: 900;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	white-space: pre-line;
+}
+h1 {
+	font-size: 5.8rem;
+	line-height: 5rem;
+}
+h2 {
+	font-size: 5rem;
+	line-height: 5rem;
+}
+h3 {
+	font-size: 3rem;
+	line-height: 2.6rem;
+}
+.action {
+	display: inline-block;
+	position: relative;
+	padding: 1em 1.5em;
+	font-family: 'Big Shoulders Display', cursive;
+	font-weight: 800;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $white;
+	cursor: pointer;
+	&::after {
+		position: absolute;
+		top: 0;
+		width: 50px;
+		height: 100%;
+		background-image: url('../img/icon-arrow-right.svg');
+		background-repeat: no-repeat;
+		background-position: 50%, 50%;
+		content: '';
+	}
+	&-primary {
+		background-color: $black;
+		&:hover {
+			background-color: $primary;
+		}
+		&::after {
+			left: 100%;
+			background-color: $primary;
+			background-image: url('../img/icon-arrow-right.svg');
+		}
+		&:hover::after {
+			background-color: $black;
+		}
+	}
+	&-secondary {
+		background-color: $black;
+		&:hover {
+			background-color: $primary;
+		}
+		&::after {
+			right: 100%;
+			background-color: $primary;
+			background-image: url('../img/icon-arrow-left.svg');
+		}
+		&:hover::after {
+			background-color: $black;
+		}
+	}
+}
+.flex {
+	display: flex;
+	flex-direction: column;
+}

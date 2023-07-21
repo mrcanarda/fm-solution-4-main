@@ -1,0 +1,138 @@
+@use 'colors' as *;
+@import 'reset';
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Outfit', sans-serif;
+	font-size: 1.8rem;
+	line-height: 2.8rem;
+	font-weight: 300;
+	color: $black;
+	background-color: $white;
+}
+// MAIN
+.top {
+	display: flex;
+	flex-direction: column;
+	&__hero {
+		width: 100%;
+	}
+	&__title {
+		margin: 0.5em 0;
+	}
+	&__text {
+		margin: 1em 0;
+	}
+	&__action {
+		margin: 1em 0;
+	}
+}
+// GRID
+.grid {
+	display: grid;
+	gap: 1em;
+	margin: 8em 0;
+	img {
+		width: 100%;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		h2 {
+			margin: 0.5em 0;
+		}
+		&-black {
+			padding: 1.5em 1em;
+			background-color: $black;
+			color: $white;
+		}
+	}
+}
+// FOOTER
+.bottom {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 2em 0;
+	background-color: $black;
+	color: $white;
+	&__logo {
+		margin: 1em 0;
+	}
+	p {
+		margin: 1em 0;
+		font-size: 1.6rem;
+		line-height: 2.6rem;
+	}
+	.social {
+		display: flex;
+		flex-direction: row;
+		margin: 1em 0;
+		a {
+			margin: 0 0.5em;
+			color: $white;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	&-location {
+		background-color: $primary;
+		color: $black;
+		a svg {
+			fill: $black;
+		}
+		a svg path {
+			fill: $black;
+		}
+	}
+}
+
+// LOCATION
+.location {
+	width: 100%;
+	position: relative;
+	#map {
+		height: 55rem;
+		.leaflet-tile-pane {
+			filter: grayscale(100%);
+		}
+	}
+	.wrapper {
+		margin: 0 auto;
+	}
+	&__back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 401;
+	}
+	&__action {
+		margin-left: 50px;
+	}
+	&__address {
+		padding: 1em 0;
+		background-color: $black;
+		color: $white;
+		h2 {
+			margin: 0.5em 0;
+			white-space: normal;
+		}
+		h3 {
+			margin: 1em 0;
+			color: $primary;
+		}
+		p {
+			margin: 1em 0;
+		}
+		&-street {
+			white-space: pre-line;
+		}
+	}
+}
+@import 'components';
+@import 'medium';
+@import 'large';
